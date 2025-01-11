@@ -1,10 +1,9 @@
 /* Navigation bar styles <*/
 
 .navbar {
-  background-color: rgba(127, 255, 212, 0.5); 
+  background-color: rgba(130, 130, 130, 0.5); 
   border-bottom: 1px solid rgb(166, 163, 163);
 }
-
 
 .nav_contents {
     display: flex;
@@ -33,7 +32,43 @@
 }
 
 
-
-
-
 /* Navigation bar styles >*/
+/* Body section < */
+
+.section_quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.section_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#actual_section_image {
+    width: 450px;     
+    height: 450px;    
+}
+
+.section_key_feature {
+    background-color: aqua;
+    width: 100%;
+
+}
+
+.key_feature_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: black;
+    width: 500px;
+    height: 500px;
+    color: aliceblue;
+
+}
+
+/* Body section > */
