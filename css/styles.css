@@ -3,6 +3,7 @@
 .navbar {
   background-color: rgba(130, 130, 130, 0.2); 
   border-bottom: 2px solid rgba(130, 130, 130, 0.1);
+  box-shadow: salmon;
 }
 
 .nav_contents {
@@ -54,16 +55,44 @@
     height: 450px;    
 }
 
-.key_feature_list {
+.carousel {
+    width: 100px; /* Width of one card */
+    height: 50px; /* Height of one card */
+    overflow: hidden; /* Hide overflowing cards */
+    position: relative;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    background-color: rgb(77, 77, 77);
-    width: 500px;
-    height: 200px;
-    color: aliceblue;
+    justify-content: center; /* Center the track */
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth sliding effect */
+    gap: 10px; /* Small gap between cards */
+  }
+  
+  .card {
+    flex: 0 0 100%; /* Each card takes up the container's width */
+    width: 100px; /* Default smaller card width */
+    height: 50px; /* Default smaller card height */
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    text-align: center;
+    line-height: 150px;
+    font-size: 18px;
+    border: 1px solid #ccc;
     border-radius: 10px;
-
-}
-
+    opacity: 0.6; /* Dim smaller cards */
+    transform: scale(0.8); /* Smaller scale for left and right cards */
+    transition: transform 0.5s, opacity 0.5s; /* Smooth transition for scaling and opacity */
+  }
+  
+  /* Center card is bigger */
+  .card.active {
+    width: 300px; /* Larger width for the active card */
+    height: 200px; /* Larger height for the active card */
+    opacity: 1; /* Full opacity for the active card */
+    transform: scale(1); /* Restore scale for the active card */
+    z-index: 10; /* Ensure the active card appears on top */
+  }
+  
 /* Body section > */
